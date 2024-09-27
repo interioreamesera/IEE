@@ -3,76 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Interioreamesera - E-Commerce Furniture Showroom</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Interioreamesera - Online Furniture Store</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file for styling -->
+    <link rel="icon" href="favicon.ico"> <!-- Favicon for browser tabs -->
 </head>
 <body>
+    <!-- Header Section -->
     <header>
+        <div class="logo">
+            <h1>Interioreamesera</h1>
+            <p>Stylish and Comfortable Furniture for Your Home</p>
+        </div>
         <nav>
-            <div class="logo"><img src="images/logo.png" alt="Interioreamesera Logo"></div>
-            <ul class="nav-links">
-                <li><a href="#about-us">About Us</a></li>
+            <ul>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#products">Products</a></li>
-                <li><a href="#contact-us">Contact Us</a></li>
-                <li><a href="#cart">Cart</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#account">My Account</a></li>
             </ul>
         </nav>
-        <h1>Welcome to Interioreamesera</h1>
-        <p>Your one-stop shop for modern furniture.</p>
     </header>
-    <main>
-        <section id="about-us" class="about-us">
-            <h2>About Us</h2>
-            <p>At Interioreamesera, we specialize in providing stylish and high-quality furniture designed to elevate your living spaces. Our commitment to craftsmanship and customer satisfaction sets us apart.</p>
-        </section>
-        <section id="products" class="product-listing">
-            <h2>Featured Products</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="images/product1.jpg" alt="Modern Sofa">
-                    <h3>Modern Sofa</h3>
-                    <p>Comfortable and stylish sofa for any living room.</p>
-                    <p class="price">$499.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="images/product2.jpg" alt="Dining Table Set">
-                    <h3>Dining Table Set</h3>
-                    <p>Elegant dining table set perfect for family gatherings.</p>
-                    <p class="price">$799.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="images/product3.jpg" alt="Office Desk">
-                    <h3>Office Desk</h3>
-                    <p>Stylish and functional desk for your home office.</p>
-                    <p class="price">$349.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="images/product4.jpg" alt="Accent Chair">
-                    <h3>Accent Chair</h3>
-                    <p>A perfect addition to any room for extra comfort.</p>
-                    <p class="price">$199.99</p>
-                    <button>Add to Cart</button>
-                </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h2>Discover Our Latest Collection</h2>
+        <p>Shop premium furniture for your living room, bedroom, and more.</p>
+        <a href="#products" class="btn">Shop Now</a>
+    </section>
+
+    <!-- Product Categories Section -->
+    <section id="products" class="products">
+        <h2>Our Product Categories</h2>
+        <div class="product-category">
+            <div class="category">
+                <img src="images/living-room.jpg" alt="Living Room Furniture">
+                <h3>Living Room</h3>
             </div>
-        </section>
-        <section id="contact-us" class="contact-us">
-            <h2>Contact Us</h2>
-            <p>If you have any questions, feel free to reach out to us:</p>
-            <p>Email: <a href="mailto:info@interioreamesera.com">info@interioreamesera.com</a></p>
-            <p>Phone: +1-234-567-890</p>
-        </section>
-    </main>
-    <footer>
-        <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
+            <div class="category">
+                <img src="images/bedroom.jpg" alt="Bedroom Furniture">
+                <h3>Bedroom</h3>
+            </div>
+            <div class="category">
+                <img src="images/office.jpg" alt="Office Furniture">
+                <h3>Office</h3>
+            </div>
+            <div class="category">
+                <img src="images/outdoor.jpg" alt="Outdoor Furniture">
+                <h3>Outdoor</h3>
+            </div>
         </div>
-        <p>&copy; 2024 Interioreamesera. All rights reserved.</p>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="images/sofa.jpg" alt="Sofa">
+                <h3>Modern Sofa</h3>
+                <p>$499.99</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+            <div class="product">
+                <img src="images/dining-table.jpg" alt="Dining Table">
+                <h3>Dining Table</h3>
+                <p>$799.99</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+            <div class="product">
+                <img src="images/desk.jpg" alt="Office Desk">
+                <h3>Office Desk</h3>
+                <p>$299.99</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Interioreamesera</h2>
+        <p>At Interioreamesera, we provide top-quality furniture to enhance your living spaces. We pride ourselves on offering a seamless shopping experience, great customer service, and stylish designs to match every home.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions? Reach out to us!</p>
+        <form action="submit_form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Interioreamesera. All Rights Reserved.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">Pinterest</a>
+        </div>
     </footer>
+
+    <script src="scripts.js"></script> <!-- Link to JavaScript file for interactivity -->
 </body>
 </html>
+
