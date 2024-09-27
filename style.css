@@ -1,154 +1,330 @@
-:root {
-  --primary-color: #2980b9;
-  --secondary-color: #e74c3c;
-  --accent-color: #27ae60;
-  --background-color: #f4f4f4;
-  --text-color: #333;
-}
+/* Import Animate.css for animations */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 
+/* Basic Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    scroll-behavior: smooth;
 }
 
-a {
-  text-decoration: none;
-  color: var(--text-color);
-}
-
-ul {
-  list-style: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 1rem;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-/* Header */
+/* Header Section */
 header {
-  background-color: var(--primary-color);
-  padding: 1rem 0;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background: linear-gradient(to right, #ff8c00, #ff5e00);
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-  font-size: 2rem;
-  font-weight: bold;
+header .logo h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-nav ul {
-  display: flex;
-  gap: 1rem;
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-nav ul li a {
-  color: #ffffff;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  transition: background-color 0.3s ease;
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
 }
 
-nav ul li a:hover {
-  background-color: darken(var(--primary-color), 10%);
+header nav ul li a:hover {
+    color: #fff200;
 }
 
 /* Hero Section */
 .hero {
-  background-image: url('images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  padding: 0 20px;
+    height: 100vh;
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    animation: fadeInUp 2s ease;
 }
 
 .hero h2 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+    font-size: 3em;
+    font-weight: bold;
 }
 
 .hero p {
-  font-size: 1.5rem;
+    font-size: 1.5em;
+    margin: 20px 0;
 }
 
 .hero .btn {
-  padding: 0.5rem 1rem;
-  background-color: var(--secondary-color);
-  color: white;
-  border-radius: 0.25rem;
-  font-size: 1.2rem;
-  transition: background-color 0.3s ease;
+    padding: 15px 30px;
+    background-color: #ff5e00;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: bounceIn 2s ease-in-out;
 }
 
 .hero .btn:hover {
-  background-color: darken(var(--secondary-color), 10%);
+    background-color: #ff8c00;
 }
 
-/* Product Categories */
+/* Product Categories Section */
 .products {
-  padding: 2rem 0;
-  text-align: center;
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+    animation: fadeInLeft 1.5s ease;
 }
 
 .products h2 {
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
 }
 
 .product-category {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
-.category {
-  background-color: white;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+.product-category .category {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    animation: zoomIn 1s ease;
 }
 
-.category:hover {
-  transform: scale(1.05);
+.product-category .category:hover {
+    transform: translateY(-10px);
 }
 
-.category img {
-  max-width: 100%;
-  border-radius: 0.25rem;
-  margin-bottom: 1rem;
+.product-category img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
 .category h3 {
-  font-size: 1.5rem;
-  color: var(--primary-color);
+    font-size: 1.8em;
+    color: #ff5e00;
 }
 
-/* ... other components ... */
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  /* ... responsive styles ... */
+/* Featured Products Section */
+.featured-products {
+    padding: 80px 0;
+    background-color: #f4f4f4;
+    text-align: center;
 }
+
+.featured-products h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.featured-products .product-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.product-list .product {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    animation: fadeInRight 1.5s ease;
+}
+
+.product-list .product:hover {
+    transform: scale(1.05);
+}
+
+.product-list img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.product h3 {
+    font-size: 1.8em;
+    color: #ff5e00;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.product .btn {
+    padding: 10px 20px;
+    background-color: #ff5e00;
+    color: white;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product .btn:hover {
+    background-color: #ff8c00;
+}
+
+/* About Us Section */
+#about {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+    animation: fadeInUp 1.5s ease;
+}
+
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2em;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+#contact {
+    padding: 80px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact input, #contact textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#contact button {
+    padding: 15px;
+    background-color: #ff5e00;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: #ff8c00;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+footer .social-media a:hover {
+    color: #ff5e00;
+}
+
+/* Keyframes for Custom Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 
